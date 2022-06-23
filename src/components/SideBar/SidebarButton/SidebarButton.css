@@ -1,0 +1,16 @@
+.sidebar-btn {
+   height: 10%;
+   width: 50%;
+   border: 2px solid white;
+   background-color: transparent;
+   color: white;
+   border-radius: 1rem;
+   transition-duration: 0.4s;
+   cursor: pointer;
+}
+
+.sidebar-btn:hover {
+   background-color: white;
+   color: rgb(55, 57, 62);
+   transition-duration: 0.4s;
+}
