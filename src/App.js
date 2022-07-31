@@ -3,6 +3,8 @@ import CountdownTimer from "./components/CountdownTimer/CountdownTimer";
 
 import "./App.css";
 import SideBar from "./components/SideBar/SideBar";
+import MainButton from "./components/MainButtons/MainButton";
+import MainButtons from "./components/MainButtons/MainButtons";
 
 export default function App() {
    const LGS = 75 * 60 * 1000;
@@ -21,7 +23,13 @@ export default function App() {
          <h1 className="title">Sınav Sayacı</h1>
          <div className="main-container">
             <SideBar setType={setType} />
-            <CountdownTimer type={type} targetDate={dateTimeAfterThreeDays} />
+            <div className="right-container">
+               <CountdownTimer
+                  type={type}
+                  targetDate={dateTimeAfterThreeDays}
+               />
+               <MainButtons />
+            </div>
          </div>
       </div>
    );

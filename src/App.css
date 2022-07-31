@@ -8,7 +8,7 @@
 }
 .main-container {
    width: 100%;
-   border: 0px solid purple;
+   border: 0px solid greenyellow;
    display: flex;
    flex-direction: row;
 }
@@ -16,4 +16,13 @@
    font-family: "Rubik", sans-serif;
    font-size: 35px;
    text-shadow: 2px 2px #000;
+}
+
+.right-container {
+   width: 80%;
+   border: 0px solid purple;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
 }
