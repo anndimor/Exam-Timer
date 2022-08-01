@@ -1,0 +1,22 @@
+.buttonContainer {
+   width: 10rem;
+   outline: none;
+   border: none;
+   border: 0px solid var(--main-text-color);
+   background-color: var(--card-bg-color);
+   border-radius: 1rem;
+   padding: 1rem;
+   margin: 2rem;
+   text-align: center;
+   font-size: 1rem;
+   font-weight: bold;
+   color: var(--main-text-color);
+   cursor: pointer;
+   transition: all 0.2s ease-in-out;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.buttonContainer:hover {
+   background-color: var(--main-text-color);
+   color: var(--card-bg-color);
+}
