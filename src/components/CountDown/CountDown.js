@@ -10,6 +10,7 @@ import ReplayIcon from "@mui/icons-material/Replay";
 
 function CountDown(props) {
    const [isCompleted, setIsCompleted] = React.useState(false);
+   const [initialTime, setInitialTime] = React.useState(50);
    const { time, start, pause, reset, status } = useTimer({
       initialTime: props.minutes * 60,
       timerType: "DECREMENTAL",

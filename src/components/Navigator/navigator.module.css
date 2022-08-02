@@ -1,0 +1,32 @@
+.container {
+   position: absolute;
+   top: 2rem;
+   left: 2rem;
+   display: flex;
+   flex-direction: column;
+   background-color: var(--main-bg-color-light);
+   border-radius: 2rem;
+   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.buttonContainer {
+   width: 10rem;
+   outline: none;
+   border: none;
+   border: 0px solid var(--main-text-color);
+   background-color: var(--button-bg-color);
+   border-radius: 1rem;
+   padding: 1rem;
+   margin: 1.2rem;
+   text-align: center;
+   font-size: 1rem;
+   font-weight: bold;
+   color: var(--main-text-color);
+   cursor: pointer;
+   transition: all 0.2s ease-in-out;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.buttonContainer:hover {
+   background-color: var(--tint-color);
+   color: var(--main-card-text-color);
+}

@@ -1,7 +1,11 @@
 :root {
-   --main-bg-color: #1d1d42;
-   --card-bg-color: #4e2ecf;
-   --main-text-color: #fff;
+   --main-bg-color: /*#1d1d42*/ rgb(35 34 68);
+   --card-bg-color: /*#4e2ecf*/ rgb(46 43 85);
+   --button-bg-color: /*#4e2ecf*/ rgb(239 198 3);
+   --main-bg-color-light: rgb(31 31 64);
+   --main-card-text-color: #fff;
+   --main-text-color: black;
+   --tint-color: rgb(180 98 255);
 }
 
 body {
