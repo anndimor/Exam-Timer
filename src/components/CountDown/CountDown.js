@@ -2,23 +2,27 @@ import React from "react";
 import Countdown, { CountdownApi } from "react-countdown";
 import { useTimer } from "use-timer";
 import Button from "./Button/Button";
-
+import useAudio from "../../hooks/useAudio";
 import Renderer from "./Renderer/Renderer";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 import ReplayIcon from "@mui/icons-material/Replay";
+import toast from "react-hot-toast";
 
 function CountDown(props) {
+   const url = require("../../audio/dingdong.wav");
    const [isCompleted, setIsCompleted] = React.useState(false);
    const [initialTime, setInitialTime] = React.useState(50);
+   const [playing, toggle] = useAudio(url);
    const { time, start, pause, reset, status } = useTimer({
       initialTime: props.seconds | (props.minutes * 60),
       timerType: "DECREMENTAL",
       endTime: 0,
-      onTimeOver: () => {
+      onTimeOver: async () => {
          setIsCompleted(true);
-         alert("Süre doldu!");
-         window.location.reload();
+         toggle();
+         toast.success("Süre Doldu!", { duration: 5000 });
+         reset();
       },
    });
    let hours = Math.floor(time / 3600);

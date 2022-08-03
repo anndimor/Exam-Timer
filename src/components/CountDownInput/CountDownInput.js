@@ -2,6 +2,7 @@ import React from "react";
 import Button from "./Button/Button";
 import Renderer from "./Renderer/Renderer";
 import CheckIcon from "@mui/icons-material/Check";
+import toast from "react-hot-toast";
 
 function CountDown(props) {
    const [hours, setHours] = React.useState(0);
@@ -9,6 +10,10 @@ function CountDown(props) {
    const [seconds, setSeconds] = React.useState(0);
    // Render a complete state
    const handleClick = () => {
+      if (hours === 0 && minutes === 0 && seconds === 0) {
+         toast.error("Lütfen bir değer giriniz!", { duration: 4000 });
+         return;
+      }
       props.setSeconds(seconds);
       props.setMinutes(minutes);
       props.setHours(hours);

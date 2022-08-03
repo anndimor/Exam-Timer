@@ -6,10 +6,12 @@ import Yks from "./pages/Yks";
 import Lgs from "./pages/Lgs";
 import Kpss from "./pages/Kpss";
 import Custom from "./pages/Custom";
+import { Toaster } from "react-hot-toast";
 
 function App() {
    return (
       <BrowserRouter>
+         <Toaster position="top-center" reverseOrder={true} />
          <Navigator />
          <Routes>
             <Route path="/" element={<Home />} />
