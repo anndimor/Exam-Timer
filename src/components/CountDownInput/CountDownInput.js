@@ -1,39 +1,18 @@
 import React from "react";
-import Countdown, { CountdownApi } from "react-countdown";
-import { useTimer } from "use-timer";
 import Button from "./Button/Button";
-
 import Renderer from "./Renderer/Renderer";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import PauseIcon from "@mui/icons-material/Pause";
 import CheckIcon from "@mui/icons-material/Check";
 
 function CountDown(props) {
-   const [isCompleted, setIsCompleted] = React.useState(false);
-   const [initialTime, setInitialTime] = React.useState(50);
-   const { time, start, pause, reset, status } = useTimer({
-      initialTime: props.minutes * 60,
-      timerType: "DECREMENTAL",
-      endTime: 0,
-      onTimeOver: () => {
-         setIsCompleted(true);
-         alert("Süre doldu!");
-         window.location.reload();
-      },
-   });
-   let hours = Math.floor(time / 3600);
-   let minutes = Math.floor((time % 3600) / 60);
-   let seconds = Math.floor(time % 60);
+   const [hours, setHours] = React.useState(0);
+   const [minutes, setMinutes] = React.useState(0);
+   const [seconds, setSeconds] = React.useState(0);
    // Render a complete state
-   if (isCompleted) {
-      console.log("isCompleted");
-   }
    const handleClick = () => {
-      if (status === "STOPPED" || status === "PAUSED") {
-         start();
-      } else {
-         pause();
-      }
+      props.setSeconds(seconds);
+      props.setMinutes(minutes);
+      props.setHours(hours);
+      props.setIsSubmitted(true);
    };
    return (
       <div
@@ -46,7 +25,14 @@ function CountDown(props) {
             width: "30%",
          }}
       >
-         <Renderer hours={hours} minutes={minutes} seconds={seconds} />
+         <Renderer
+            hours={hours}
+            minutes={minutes}
+            seconds={seconds}
+            setHours={setHours}
+            setMinutes={setMinutes}
+            setSeconds={setSeconds}
+         />
 
          <div style={{ display: "flex" }}>
             <Button

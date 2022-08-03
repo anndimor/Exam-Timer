@@ -10,7 +10,7 @@ function Kpss(props) {
    };
    return (
       <div className={styles.container}>
-         <h1>Kpss İçin Zamanlayıcı</h1>
+         <h1>KPSS İçin Zamanlayıcı</h1>
          {
             // <CountDown minutes={165} />
             value === "0" ? (
