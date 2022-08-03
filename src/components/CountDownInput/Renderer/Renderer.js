@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./renderer.module.css";
 
 const Completionist = () => <span>You are good to go!</span>;
@@ -12,6 +12,7 @@ function Renderer({
    setSeconds,
 }) {
    // Render a countdown
+   const inputReference = useRef(null);
    const handleHourChange = (e) => {
       setHours(e.target.value);
    };
@@ -21,15 +22,19 @@ function Renderer({
    const handleSecondChange = (e) => {
       setSeconds(e.target.value);
    };
+   useEffect(() => {
+      inputReference.current.focus();
+   }, []);
    return (
       <div className={styles.mainContainer}>
          <div className={styles.timeTextContainer}>
             <div className={styles.singleTimeContainer}>
                <input
-                  value={hours}
+                  value={parseInt(hours)}
                   type="number"
                   className={styles.timeInput}
                   onChange={handleHourChange}
+                  ref={inputReference}
                ></input>
                <span className={styles.timeTitle}>Saat</span>
             </div>
