@@ -6,6 +6,8 @@ TYT, AYT, LGS, KPSS sınav modları
 Özelleştirilebilir sayaç modu
 
 ## Kullanım
-Sol taraftaki navigasyon sekmesinden istedğin sınav tipini seç.
-İstediğin sınavı seçtikten sonra dilediğin oturumu sayacın ve butonların altında bulunan oturum seçme penceresinden seçerek uygun zamanı başlat.
-Durdurmak için, sıfırlamak için veya özel modda yeni bir zamanlayıcı ayarlamak için sayaçın altındaki butonları kullanabilirsin.
+- Sol taraftaki navigasyon sekmesinden istediğin sınav tipini seç.
+
+- İstediğin sınavı seçtikten sonra dilediğin oturumu sayacın ve butonların altında bulunan oturum seçme penceresinden seçerek uygun zamanı başlat.
+
+- Durdurmak için, sıfırlamak için veya özel modda yeni bir zamanlayıcı ayarlamak için sayaçın altındaki butonları kullanabilirsin.
