@@ -30,3 +30,44 @@
    background-color: var(--tint-color);
    color: var(--main-card-text-color);
 }
+
+.menuIcon {
+   display: none;
+}
+
+.hamburgerButtonContainer {
+   display: none;
+}
+
+@media screen and (max-width: 800px) {
+   .container {
+      display: none;
+   }
+   .menuIcon {
+      display: block;
+      font-size: 2rem;
+      color: var(--main-card-text-color);
+   }
+   .hamburgerButtonContainer {
+      display: block;
+      outline: none;
+      border: none;
+      border: 0px solid var(--main-text-color);
+      background-color: var(--tint-color);
+      padding: 1rem;
+      margin: 1.2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: all 0.2s ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      position: absolute;
+      height: 3.5rem;
+      width: 3.5rem;
+      border-radius: 50%;
+      bottom: 3%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+}

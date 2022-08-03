@@ -12,7 +12,7 @@ function App() {
    return (
       <BrowserRouter>
          <Toaster position="top-center" reverseOrder={true} />
-         <Navigator />
+
          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/yks-sayaci" element={<Yks />} />
@@ -20,6 +20,7 @@ function App() {
             <Route path="/kpss-sayaci" element={<Kpss />} />
             <Route path="/custom" element={<Custom />} />
          </Routes>
+         <Navigator />
       </BrowserRouter>
    );
 }
