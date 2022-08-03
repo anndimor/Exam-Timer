@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Button from "../CountDown/Button/Button";
 import styles from "./navigator.module.css";
 import { useNavigate } from "react-router-dom";
@@ -10,15 +9,9 @@ function Navigator(props) {
       <div className={styles.container}>
          <Button
             className={styles.buttonContainer}
-            onClick={() => navigate("/tyt-sayaci")}
+            onClick={() => navigate("/yks-sayaci")}
          >
-            TYT
-         </Button>
-         <Button
-            className={styles.buttonContainer}
-            onClick={() => navigate("/ayt-sayaci")}
-         >
-            AYT
+            YKS
          </Button>
          <Button
             className={styles.buttonContainer}
@@ -34,7 +27,7 @@ function Navigator(props) {
          </Button>
          <Button
             className={styles.buttonContainer}
-            onClick={() => alert("Bu sayfaya erişim yetkiniz yok.")}
+            onClick={() => navigate("/custom")}
          >
             Özel
          </Button>
