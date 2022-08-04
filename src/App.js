@@ -14,7 +14,7 @@ function App() {
          <Toaster position="top-center" reverseOrder={true} />
 
          <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Custom />} />
             <Route path="/yks-sayaci" element={<Yks />} />
             <Route path="/lgs-sayaci" element={<Lgs />} />
             <Route path="/kpss-sayaci" element={<Kpss />} />
