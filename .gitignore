@@ -13,6 +13,9 @@
 
 # ignore .firebase folder
 .firebase
+.vscode
+firebase.json
+.firebaserc
 # misc
 .DS_Store
 .env.local
