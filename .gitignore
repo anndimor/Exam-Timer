@@ -45,6 +45,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/.firebase
+/firebase
 /.vscode
 /.github/workflows
